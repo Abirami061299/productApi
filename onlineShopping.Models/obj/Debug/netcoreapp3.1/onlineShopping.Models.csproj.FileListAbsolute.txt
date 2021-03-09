@@ -1,0 +1,9 @@
+C:\Users\Admin\source\repos\onlineShop\onlineShopping.Models\bin\Debug\netcoreapp3.1\onlineShopping.Models.deps.json
+C:\Users\Admin\source\repos\onlineShop\onlineShopping.Models\bin\Debug\netcoreapp3.1\onlineShopping.Models.dll
+C:\Users\Admin\source\repos\onlineShop\onlineShopping.Models\bin\Debug\netcoreapp3.1\onlineShopping.Models.pdb
+C:\Users\Admin\source\repos\onlineShop\onlineShopping.Models\obj\Debug\netcoreapp3.1\onlineShopping.Models.csprojAssemblyReference.cache
+C:\Users\Admin\source\repos\onlineShop\onlineShopping.Models\obj\Debug\netcoreapp3.1\onlineShopping.Models.AssemblyInfoInputs.cache
+C:\Users\Admin\source\repos\onlineShop\onlineShopping.Models\obj\Debug\netcoreapp3.1\onlineShopping.Models.AssemblyInfo.cs
+C:\Users\Admin\source\repos\onlineShop\onlineShopping.Models\obj\Debug\netcoreapp3.1\onlineShopping.Models.csproj.CoreCompileInputs.cache
+C:\Users\Admin\source\repos\onlineShop\onlineShopping.Models\obj\Debug\netcoreapp3.1\onlineShopping.Models.dll
+C:\Users\Admin\source\repos\onlineShop\onlineShopping.Models\obj\Debug\netcoreapp3.1\onlineShopping.Models.pdb
