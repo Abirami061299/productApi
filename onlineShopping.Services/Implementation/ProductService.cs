@@ -31,15 +31,32 @@ namespace onlineShopping.Services.Implementation
                 {
                     ProductId = productViewModel.ProductId,
                     ProductName = productViewModel.ProductName,
-                   
-                    AvailableQuantity = productViewModel.AvailableQuantity
+                    UnitPrice=productViewModel.UnitPrice,
+                    AvailableQuantity = productViewModel.AvailableQuantity,
 
-
+                    CreatedDate = DateTime.UtcNow
                 };
 
             _productRepository.Add(product);
 
 
+        }
+        public Product GetById(Guid ProductId)
+        {
+            return _productRepository.GetById(ProductId);
+        }
+        public void Update(Product product, Product entity)
+        {
+
+            product.ProductName = entity.ProductName;
+            product.AvailableQuantity = entity.AvailableQuantity;
+            product.UnitPrice= entity.UnitPrice;
+            product.ModifiedDate = DateTime.UtcNow;
+            _productRepository.Update(product, entity);
+        }
+        public void Delete(Product product)
+        {
+            _productRepository.Delete(product);
         }
     }
 }

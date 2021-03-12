@@ -11,5 +11,8 @@ namespace onlineShopping.Services.Interface
         List<Product> Get();
 
         void Add(ProductViewModel productViewModel);
+        void Update(Product product, Product entity);
+        Product GetById(Guid ProductId);
+        void Delete(Product product);
     }
 }

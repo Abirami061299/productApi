@@ -1,8 +1,9 @@
-﻿using Microsoft.EntityFrameworkCore.Migrations;
+﻿using System;
+using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace onlineShop.Repository.Migrations
 {
-    public partial class Initial : Migration
+    public partial class second : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -10,9 +11,12 @@ namespace onlineShop.Repository.Migrations
                 name: "Product",
                 columns: table => new
                 {
-                    ProductId = table.Column<string>(nullable: false),
-                    ProductName = table.Column<string>(nullable: true),
-                    AvailableQuantity = table.Column<int>(nullable: false)
+                    ProductId = table.Column<Guid>(nullable: false),
+                    ProductName = table.Column<string>(maxLength: 15, nullable: true),
+                    UnitPrice = table.Column<decimal>(type: "decimal(18, 3)", nullable: false),
+                    AvailableQuantity = table.Column<int>(nullable: false),
+                    CreatedDate = table.Column<DateTime>(nullable: false),
+                    ModifiedDate = table.Column<DateTime>(nullable: false)
                 },
                 constraints: table =>
                 {

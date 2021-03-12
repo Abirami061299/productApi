@@ -28,5 +28,24 @@ namespace onlineShop.Repository.Implementation
             _dbContext.Add(product);
             _dbContext.SaveChanges();
         }
+        public Product GetById(Guid ProductId)
+        {
+            return _dbContext.Product.FirstOrDefault(p => p.ProductId==ProductId);
+        }
+        public void Update(Product product, Product entity)
+        {
+            
+            product.ProductName = entity.ProductName;
+            product.AvailableQuantity = entity.AvailableQuantity;
+            product.UnitPrice = entity.UnitPrice;
+            product.ModifiedDate = DateTime.UtcNow;
+            
+            _dbContext.SaveChanges();
+        }
+        public void Delete(Product product)
+        {
+            _dbContext.Product.Remove(product);
+            _dbContext.SaveChanges();
+        }
     }
 }
