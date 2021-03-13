@@ -9,12 +9,13 @@ namespace onlineShop.Repository.EntityModel
     public class Product
     {
         [Key]
-        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+       [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public Guid ProductId { get; set; }
         [MinLength(3),MaxLength(15)]
         public string ProductName { get; set; }
 
-        [Column(TypeName = "decimal(18, 3)")]
+        [Column(TypeName = "decimal(8, 2)")]
+        [Range(0, 999999.99)]
         public decimal UnitPrice { get; set; }
 
         [Range(1,15)]
@@ -22,7 +23,7 @@ namespace onlineShop.Repository.EntityModel
 
         public DateTime CreatedDate { get; set; }
         public DateTime ModifiedDate { get; set; }
-
+        public ICollection<Order> Order { get; set; }
 
     }
 }

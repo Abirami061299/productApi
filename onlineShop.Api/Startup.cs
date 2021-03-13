@@ -16,7 +16,7 @@ using onlineShop.Repository.Implementation;
 using onlineShop.Repository.Interface;
 using onlineShopping.Services.Interface;
 using onlineShopping.Services.Implementation;
-
+using Microsoft.OpenApi.Models;
 namespace onlineShop.Api
 {
     public class Startup
@@ -44,6 +44,16 @@ namespace onlineShop.Api
 
             services.AddScoped<IProductService, ProductService>();
             services.AddScoped<IProductRepository, ProductRepository>();
+            
+            services.AddScoped<IOrderService, OrderService>();
+            services.AddScoped<IOrderRepository, OrderRepository>();
+            services.AddMvc();
+
+            services.AddSwaggerGen(c =>
+            {
+                c.SwaggerDoc("v1", new OpenApiInfo { Title = "My API", Version = "v1" });
+            });
+           
 
         }
 
@@ -60,10 +70,15 @@ namespace onlineShop.Api
             app.UseRouting();
 
             app.UseAuthorization();
-
+          
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllers();
+            });
+            app.UseSwagger();
+            app.UseSwaggerUI(c =>
+            {
+                c.SwaggerEndpoint("v1/swagger.json", "My API V1");
             });
         }
     }

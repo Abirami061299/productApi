@@ -10,8 +10,8 @@ using onlineShop.Repository;
 namespace onlineShop.Repository.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20210312063759_second")]
-    partial class second
+    [Migration("20210312124736_product-order")]
+    partial class productorder
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -20,6 +20,38 @@ namespace onlineShop.Repository.Migrations
                 .HasAnnotation("ProductVersion", "3.1.11")
                 .HasAnnotation("Relational:MaxIdentifierLength", 128)
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+            modelBuilder.Entity("onlineShop.Repository.EntityModel.Order", b =>
+                {
+                    b.Property<Guid>("OrderId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<DateTime>("CreatedDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<Guid>("CustomerId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<DateTime>("ModifiedDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<Guid>("ProductId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<int>("Quantity")
+                        .HasColumnType("int");
+
+                    b.Property<decimal>("TotalPrice")
+                        .HasColumnType("decimal(8, 2)");
+
+                    b.HasKey("OrderId");
+
+                    b.HasIndex("ProductId");
+
+                    b.ToTable("Order");
+                });
 
             modelBuilder.Entity("onlineShop.Repository.EntityModel.Product", b =>
                 {
@@ -41,11 +73,20 @@ namespace onlineShop.Repository.Migrations
                         .HasMaxLength(15);
 
                     b.Property<decimal>("UnitPrice")
-                        .HasColumnType("decimal(18, 3)");
+                        .HasColumnType("decimal(8, 2)");
 
                     b.HasKey("ProductId");
 
                     b.ToTable("Product");
+                });
+
+            modelBuilder.Entity("onlineShop.Repository.EntityModel.Order", b =>
+                {
+                    b.HasOne("onlineShop.Repository.EntityModel.Product", "Product")
+                        .WithMany("Order")
+                        .HasForeignKey("ProductId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
                 });
 #pragma warning restore 612, 618
         }
