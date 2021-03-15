@@ -2,7 +2,7 @@
 using onlineShopping.Models.ViewModels;
 using System;
 using System.Collections.Generic;
-using System.Text;
+
 
 namespace onlineShopping.Services.Interface
 {
@@ -14,5 +14,7 @@ namespace onlineShopping.Services.Interface
         void Update(Product product, Product entity);
         Product GetById(Guid ProductId);
         void Delete(Product product);
+
+        void UpdateQuantity(Order order);
     }
 }

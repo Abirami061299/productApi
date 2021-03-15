@@ -1,5 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.Logging;
+
 using onlineShop.Repository.EntityModel;
 using onlineShopping.Models.ViewModels;
 using onlineShopping.Services.Interface;
@@ -32,7 +32,7 @@ namespace onlineShop.Api.Controllers
         }
 
 
-        [HttpGet("{ProductId}", Name = "Get")]
+        [HttpGet("{ProductId}", Name = "GetByProductId")]
         public IActionResult GetById(Guid ProductId)
         {
             Product product = _productService.GetById(ProductId);
@@ -71,6 +71,21 @@ namespace onlineShop.Api.Controllers
             _productService.Delete(product);
             return NoContent();
         }
+
+       /**   [HttpPut]
+           public IActionResult UpdateQuantity(Guid productId,int quantity)
+           {
+               Product product = _productService.GetById(productId);
+               if (product == null)
+               {
+                   return NotFound("The product details couldn't be found.");
+               }
+               _productService.UpdateQuantity(product);
+               return NoContent();
+
+
+           }*/
+        
 
 
 

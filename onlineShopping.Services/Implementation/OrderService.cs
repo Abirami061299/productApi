@@ -3,17 +3,20 @@ using onlineShop.Repository.Interface;
 using onlineShopping.Models.ViewModels;
 using onlineShopping.Services.Interface;
 using System;
+
 using System.Collections.Generic;
-using System.Text;
+
 
 namespace onlineShopping.Services.Implementation
 {
     public class OrderService:IOrderService
     {
         private readonly IOrderRepository _orderRepository;
-        public OrderService(IOrderRepository orderRepository)
+        private readonly IProductRepository _productRepository;
+        public OrderService(IOrderRepository orderRepository,IProductRepository productRepository)
         {
             _orderRepository = orderRepository;
+            _productRepository = productRepository;
         }
         public List<Order> Get()
         {
@@ -34,10 +37,23 @@ namespace onlineShopping.Services.Implementation
                     CreatedDate = DateTime.UtcNow,
                     
                 };
+           
+            
+           
 
             _orderRepository.Add(order);
+            _productRepository.UpdateQuantity(order);
 
 
+        }
+        public Order GetByOrderId(Guid orderId)
+        {
+            return _orderRepository.GetByOrderId(orderId);
+        }
+
+        public void Delete(Order order)
+        {
+            _orderRepository.Delete(order);
         }
     }
 }

@@ -3,7 +3,7 @@ using onlineShop.Repository.Interface;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
+
 
 namespace onlineShop.Repository.Implementation
 {
@@ -45,6 +45,14 @@ namespace onlineShop.Repository.Implementation
         public void Delete(Product product)
         {
             _dbContext.Product.Remove(product);
+            _dbContext.SaveChanges();
+        }
+
+        public void UpdateQuantity(Order order)
+        {
+
+            Product product = GetById(order.ProductId);
+            product.AvailableQuantity -= order.Quantity;
             _dbContext.SaveChanges();
         }
     }

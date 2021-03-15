@@ -2,7 +2,7 @@
 using onlineShopping.Models.ViewModels;
 using System;
 using System.Collections.Generic;
-using System.Text;
+
 
 namespace onlineShopping.Services.Interface
 {
@@ -10,5 +10,7 @@ namespace onlineShopping.Services.Interface
     {
         List<Order> Get();
         void Add(OrderViewModel orderViewModel);
+        Order GetByOrderId(Guid ProductId);
+        void Delete(Order order);
     }
 }

@@ -1,12 +1,9 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿
 using Microsoft.AspNetCore.Mvc;
 using onlineShopping.Services.Interface;
 using onlineShop.Repository.EntityModel;
 using onlineShopping.Models.ViewModels;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace onlineShop.Api.Controllers
 {
@@ -34,6 +31,29 @@ namespace onlineShop.Api.Controllers
             _orderService.Add(orderViewModel);
             return Ok("product ordered!!!");
         }
+       [HttpDelete("{OrderId}")]
+        public IActionResult Delete(Guid OrderId)
+        {
+            Order order  = _orderService.GetByOrderId(OrderId);
+            if (order == null)
+            {
+                return NotFound("The product details couldn't be found.");
+            }
+            _orderService.Delete(order);
+            return NoContent();
+        }
+        [HttpGet("{OrderId}", Name = "GetByOrderId")]
+        public IActionResult GetByOrderId(Guid OrderId)
+        {
+            Order order = _orderService.GetByOrderId(OrderId);
+            if (order == null)
+            {
+
+                return NotFound("The order details couldn't be found.");
+            }
+            return Ok(order);
+        }
+
 
     }
 }

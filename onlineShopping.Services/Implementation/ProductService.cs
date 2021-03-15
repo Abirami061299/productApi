@@ -4,7 +4,7 @@ using onlineShopping.Models.ViewModels;
 using onlineShopping.Services.Interface;
 using System;
 using System.Collections.Generic;
-using System.Text;
+
 
 namespace onlineShopping.Services.Implementation
 {
@@ -57,6 +57,10 @@ namespace onlineShopping.Services.Implementation
         public void Delete(Product product)
         {
             _productRepository.Delete(product);
+        }
+        public void UpdateQuantity(Order order)
+        {
+            _productRepository.UpdateQuantity(order);
         }
     }
 }

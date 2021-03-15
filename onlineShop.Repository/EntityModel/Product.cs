@@ -1,6 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
+
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
@@ -23,7 +22,10 @@ namespace onlineShop.Repository.EntityModel
 
         public DateTime CreatedDate { get; set; }
         public DateTime ModifiedDate { get; set; }
-       
 
+        public static void UpdateQuantity(object productId, object quantity)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

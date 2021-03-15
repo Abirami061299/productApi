@@ -3,7 +3,6 @@ using onlineShop.Repository.Interface;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 
 namespace onlineShop.Repository.Implementation
 {
@@ -26,6 +25,15 @@ namespace onlineShop.Repository.Implementation
         {
 
             _dbContext.Add(order);
+            _dbContext.SaveChanges();
+        }
+        public Order GetByOrderId(Guid OrderId)
+        {
+            return _dbContext.Order.FirstOrDefault(o=> o.OrderId == OrderId);
+        }
+        public void Delete(Order order)
+        {
+            _dbContext.Order.Remove(order);
             _dbContext.SaveChanges();
         }
     }

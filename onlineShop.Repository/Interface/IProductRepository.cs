@@ -1,7 +1,7 @@
 ﻿using onlineShop.Repository.EntityModel;
 using System;
 using System.Collections.Generic;
-using System.Text;
+
 
 namespace onlineShop.Repository.Interface
 {
@@ -13,5 +13,6 @@ namespace onlineShop.Repository.Interface
         Product GetById(Guid ProductId);
 
         void Delete(Product product);
+        void UpdateQuantity(Order order);
     }
 }
