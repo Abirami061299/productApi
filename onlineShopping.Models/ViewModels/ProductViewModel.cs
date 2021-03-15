@@ -9,8 +9,7 @@ namespace onlineShopping.Models.ViewModels
     {
 
 
-        [Key]
-        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+       
         public Guid ProductId { get; set; }
         [MinLength(3), MaxLength(15)]
         public string ProductName { get; set; }
@@ -24,7 +23,7 @@ namespace onlineShopping.Models.ViewModels
 
         public DateTime CreatedDate { get; set; } = DateTime.UtcNow;
         public DateTime ModifiedDate { get; set; } = DateTime.UtcNow;
-        public ICollection<OrderViewModel> Order { get; set; }
+        
        
     }
 }

@@ -23,7 +23,7 @@ namespace onlineShop.Repository.EntityModel
 
         public DateTime CreatedDate { get; set; }
         public DateTime ModifiedDate { get; set; }
-        public ICollection<Order> Order { get; set; }
+       
 
     }
 }

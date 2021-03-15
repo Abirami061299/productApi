@@ -10,8 +10,8 @@ using onlineShop.Repository;
 namespace onlineShop.Repository.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20210312124736_product-order")]
-    partial class productorder
+    [Migration("20210315051751_OrderProduct1.2")]
+    partial class OrderProduct12
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -83,7 +83,7 @@ namespace onlineShop.Repository.Migrations
             modelBuilder.Entity("onlineShop.Repository.EntityModel.Order", b =>
                 {
                     b.HasOne("onlineShop.Repository.EntityModel.Product", "Product")
-                        .WithMany("Order")
+                        .WithMany()
                         .HasForeignKey("ProductId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();

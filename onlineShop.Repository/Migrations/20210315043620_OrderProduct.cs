@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace onlineShop.Repository.Migrations
 {
-    public partial class productorder : Migration
+    public partial class OrderProduct : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {

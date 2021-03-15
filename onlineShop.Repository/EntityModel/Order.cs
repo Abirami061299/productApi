@@ -26,9 +26,9 @@ namespace onlineShop.Repository.EntityModel
         public DateTime CreatedDate { get; set; }
         public DateTime ModifiedDate { get; set; }
 
-        [ForeignKey("ProductId")]
+        [ForeignKey(nameof(ProductId))]
         public Product Product { get; set; }
-
+        
 
     }
 }

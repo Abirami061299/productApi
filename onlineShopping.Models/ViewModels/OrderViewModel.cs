@@ -8,14 +8,13 @@ namespace onlineShopping.Models.ViewModels
 {
     public class OrderViewModel
     {
-        [Key]
-        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+       
         public Guid OrderId { get; set; }
         public Guid ProductId { get; set; }
 
 
-        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        public Guid CustomerId { get; set; }
+
+        public Guid CustomerId { get; set; } 
         [Range(1, 15)]
         public int Quantity { get; set; }
 
@@ -26,8 +25,7 @@ namespace onlineShopping.Models.ViewModels
         public DateTime CreatedDate { get; set; }
         public DateTime ModifiedDate { get; set; }
 
-        [ForeignKey("ProductId")]
-        public ProductViewModel Product { get; set; }
+        
 
     }
 }
