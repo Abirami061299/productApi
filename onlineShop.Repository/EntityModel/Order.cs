@@ -23,8 +23,8 @@ namespace onlineShop.Repository.EntityModel
         [Range(0, 999999.99)]
         public Decimal TotalPrice { get; set; }
 
-        public DateTime CreatedDate { get; set; }
-        public DateTime ModifiedDate { get; set; }
+        public DateTime OrderedDate { get; set; }
+        public DateTime DeliveryDate { get; set; }
 
         [ForeignKey(nameof(ProductId))]
         public Product Product { get; set; }

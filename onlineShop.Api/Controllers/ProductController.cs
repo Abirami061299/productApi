@@ -72,20 +72,7 @@ namespace onlineShop.Api.Controllers
             return NoContent();
         }
 
-       /**   [HttpPut]
-           public IActionResult UpdateQuantity(Guid productId,int quantity)
-           {
-               Product product = _productService.GetById(productId);
-               if (product == null)
-               {
-                   return NotFound("The product details couldn't be found.");
-               }
-               _productService.UpdateQuantity(product);
-               return NoContent();
-
-
-           }*/
-        
+      
 
 
 

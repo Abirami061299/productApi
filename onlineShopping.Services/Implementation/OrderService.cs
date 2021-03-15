@@ -29,13 +29,14 @@ namespace onlineShopping.Services.Implementation
             var order
                 = new Order()
                 {
-                    OrderId=orderViewModel.OrderId,
+                    OrderId = orderViewModel.OrderId,
                     ProductId = orderViewModel.ProductId,
-                    CustomerId=Guid.NewGuid(),
-                    Quantity =orderViewModel.Quantity,
-                    TotalPrice=orderViewModel.TotalPrice,
-                    CreatedDate = DateTime.UtcNow,
-                    
+                    CustomerId = Guid.NewGuid(),
+                    Quantity = orderViewModel.Quantity,
+                    TotalPrice = orderViewModel.TotalPrice,
+                    OrderedDate = DateTime.UtcNow,
+                    DeliveryDate = DateTime.UtcNow.AddDays(7)
+
                 };
            
             
