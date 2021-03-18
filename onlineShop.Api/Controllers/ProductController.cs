@@ -45,7 +45,7 @@ namespace onlineShop.Api.Controllers
         }
 
         [HttpPut("{ProductId}")]
-        public IActionResult Put(Guid ProductId, [FromBody] Product product)
+        public IActionResult Put(Guid ProductId, [FromBody] ProductViewModel product)
         {
             if (product == null)
             {
@@ -56,7 +56,7 @@ namespace onlineShop.Api.Controllers
             {
                 return NotFound("The product details couldn't be found.");
             }
-            _productService.Update(productToUpdate, product);
+            _productService.Update(ProductId, product);
             return NoContent();
         }
 

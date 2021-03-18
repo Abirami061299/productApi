@@ -9,7 +9,7 @@ namespace onlineShop.Repository.Interface
     {
         List<Product> Get();
         void Add(Product product);
-        void Update(Product product, Product entity);
+        void Update(Product product);
         Product GetById(Guid ProductId);
 
         void Delete(Product product);

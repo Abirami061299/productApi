@@ -10,7 +10,7 @@ namespace onlineShopping.Services.Interface
     {
         List<Order> Get();
         void Add(OrderViewModel orderViewModel);
-        Order GetByOrderId(Guid ProductId);
+        Order GetByOrderId(Guid orderId);
         void Delete(Order order);
     }
 }

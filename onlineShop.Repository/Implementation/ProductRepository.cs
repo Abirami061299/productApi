@@ -32,14 +32,11 @@ namespace onlineShop.Repository.Implementation
         {
             return _dbContext.Product.FirstOrDefault(p => p.ProductId==ProductId);
         }
-        public void Update(Product product, Product entity)
+        public void Update(Product product)
         {
             
-            product.ProductName = entity.ProductName;
-            product.AvailableQuantity = entity.AvailableQuantity;
-            product.UnitPrice = entity.UnitPrice;
-            product.ModifiedDate = DateTime.UtcNow;
             
+            _dbContext.Product.Update(product);
             _dbContext.SaveChanges();
         }
         public void Delete(Product product)

@@ -8,7 +8,7 @@ namespace onlineShop.Repository.Interface
     {
         public List<Order> Get();
         public void Add(Order order);
-        Order GetByOrderId(Guid OrderId);
+        Order GetByOrderId(Guid orderId);
         void Delete(Order order);
     }
 }

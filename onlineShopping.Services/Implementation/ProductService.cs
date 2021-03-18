@@ -29,7 +29,7 @@ namespace onlineShopping.Services.Implementation
             var product
                 = new Product()
                 {
-                    ProductId = productViewModel.ProductId,
+                   
                     ProductName = productViewModel.ProductName,
                     UnitPrice=productViewModel.UnitPrice,
                     AvailableQuantity = productViewModel.AvailableQuantity,
@@ -45,14 +45,24 @@ namespace onlineShopping.Services.Implementation
         {
             return _productRepository.GetById(ProductId);
         }
-        public void Update(Product product, Product entity)
+        public void Update(Guid ProductId, ProductViewModel productViewModel)
         {
+            var productToUpdate = GetById(ProductId);
 
-            product.ProductName = entity.ProductName;
-            product.AvailableQuantity = entity.AvailableQuantity;
-            product.UnitPrice= entity.UnitPrice;
-            product.ModifiedDate = DateTime.UtcNow;
-            _productRepository.Update(product, entity);
+            if (productToUpdate == null)
+            {
+                throw new Exception("The Product record couldn't be found.");
+            }
+
+            productToUpdate.ProductName = productViewModel.ProductName;
+            productToUpdate.AvailableQuantity = productViewModel.AvailableQuantity;
+            productToUpdate.UnitPrice = productViewModel.UnitPrice;
+            productToUpdate.ModifiedDate = DateTime.UtcNow;
+            _productRepository.Update(productToUpdate);
+
+            
+           
+            
         }
         public void Delete(Product product)
         {

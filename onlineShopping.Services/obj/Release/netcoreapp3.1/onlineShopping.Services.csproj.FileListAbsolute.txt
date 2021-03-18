@@ -1,0 +1,14 @@
+C:\Users\Admin\source\repos\onlineShop\onlineShopping.Services\bin\Release\netcoreapp3.1\onlineShopping.Services.deps.json
+C:\Users\Admin\source\repos\onlineShop\onlineShopping.Services\bin\Release\netcoreapp3.1\onlineShopping.Services.dll
+C:\Users\Admin\source\repos\onlineShop\onlineShopping.Services\bin\Release\netcoreapp3.1\onlineShopping.Services.pdb
+C:\Users\Admin\source\repos\onlineShop\onlineShopping.Services\bin\Release\netcoreapp3.1\onlineShop.Repository.dll
+C:\Users\Admin\source\repos\onlineShop\onlineShopping.Services\bin\Release\netcoreapp3.1\onlineShopping.Models.dll
+C:\Users\Admin\source\repos\onlineShop\onlineShopping.Services\bin\Release\netcoreapp3.1\onlineShop.Repository.pdb
+C:\Users\Admin\source\repos\onlineShop\onlineShopping.Services\bin\Release\netcoreapp3.1\onlineShopping.Models.pdb
+C:\Users\Admin\source\repos\onlineShop\onlineShopping.Services\obj\Release\netcoreapp3.1\onlineShopping.Services.csprojAssemblyReference.cache
+C:\Users\Admin\source\repos\onlineShop\onlineShopping.Services\obj\Release\netcoreapp3.1\onlineShopping.Services.AssemblyInfoInputs.cache
+C:\Users\Admin\source\repos\onlineShop\onlineShopping.Services\obj\Release\netcoreapp3.1\onlineShopping.Services.AssemblyInfo.cs
+C:\Users\Admin\source\repos\onlineShop\onlineShopping.Services\obj\Release\netcoreapp3.1\onlineShopping.Services.csproj.CoreCompileInputs.cache
+C:\Users\Admin\source\repos\onlineShop\onlineShopping.Services\obj\Release\netcoreapp3.1\onlineShopping.Services.csproj.CopyComplete
+C:\Users\Admin\source\repos\onlineShop\onlineShopping.Services\obj\Release\netcoreapp3.1\onlineShopping.Services.dll
+C:\Users\Admin\source\repos\onlineShop\onlineShopping.Services\obj\Release\netcoreapp3.1\onlineShopping.Services.pdb

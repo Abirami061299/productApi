@@ -23,9 +23,6 @@ namespace onlineShop.Repository.EntityModel
         public DateTime CreatedDate { get; set; }
         public DateTime ModifiedDate { get; set; }
 
-        public static void UpdateQuantity(object productId, object quantity)
-        {
-            throw new NotImplementedException();
-        }
+        
     }
 }
