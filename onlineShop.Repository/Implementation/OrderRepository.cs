@@ -1,4 +1,5 @@
-﻿using onlineShop.Repository.EntityModel;
+﻿using Microsoft.EntityFrameworkCore;
+using onlineShop.Repository.EntityModel;
 using onlineShop.Repository.Interface;
 using System;
 using System.Collections.Generic;
@@ -18,7 +19,7 @@ namespace onlineShop.Repository.Implementation
 
         public List<Order> Get()
         {
-            return _dbContext.Order.ToList();
+            return _dbContext.Order.Include(obj => obj.Product).ToList();
         }
 
         public void Add(Order order)
