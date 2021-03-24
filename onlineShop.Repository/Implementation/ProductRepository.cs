@@ -44,7 +44,7 @@ namespace onlineShop.Repository.Implementation
             _dbContext.Product.Remove(product);
             _dbContext.SaveChanges();
         }
-
+        //quantity updation
         public void UpdateQuantity(Order order)
         {
 
