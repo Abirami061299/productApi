@@ -39,13 +39,13 @@ namespace onlineShop.Repository.Implementation
             _dbContext.Product.Update(product);
             _dbContext.SaveChanges();
         }
-        //product deletion
+       
         public void Delete(Product product)
         {
             _dbContext.Product.Remove(product);
             _dbContext.SaveChanges();
         }
-        //quantity updation
+        
         public void UpdateQuantity(Order order)
         {
 
