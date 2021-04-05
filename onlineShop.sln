@@ -3,13 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31025.194
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "onlineShop.Api", "onlineShop.Api\onlineShop.Api.csproj", "{2D6F343E-209B-4B57-850A-2DC7BF2142DD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "onlineShop.Api", "onlineShop.Api\onlineShop.Api.csproj", "{2D6F343E-209B-4B57-850A-2DC7BF2142DD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "onlineShop.Repository", "onlineShop.Repository\onlineShop.Repository.csproj", "{658E019E-B979-4B22-84D1-8D85D0EC6C94}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "onlineShop.Repository", "onlineShop.Repository\onlineShop.Repository.csproj", "{658E019E-B979-4B22-84D1-8D85D0EC6C94}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "onlineShopping.Models", "onlineShopping.Models\onlineShopping.Models.csproj", "{D93AEBC6-2EBC-4121-B7B7-457D398EFA3F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "onlineShopping.Models", "onlineShopping.Models\onlineShopping.Models.csproj", "{D93AEBC6-2EBC-4121-B7B7-457D398EFA3F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "onlineShopping.Services", "onlineShopping.Services\onlineShopping.Services.csproj", "{CA828ED1-E8FE-455D-8AFE-A3F8DD566CB8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "onlineShopping.Services", "onlineShopping.Services\onlineShopping.Services.csproj", "{CA828ED1-E8FE-455D-8AFE-A3F8DD566CB8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Shopping.UnitTests", "Shopping.UnitTests\Shopping.UnitTests.csproj", "{C52BB5A2-37EB-45F8-8056-F2576001010C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{CA828ED1-E8FE-455D-8AFE-A3F8DD566CB8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CA828ED1-E8FE-455D-8AFE-A3F8DD566CB8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CA828ED1-E8FE-455D-8AFE-A3F8DD566CB8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C52BB5A2-37EB-45F8-8056-F2576001010C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C52BB5A2-37EB-45F8-8056-F2576001010C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C52BB5A2-37EB-45F8-8056-F2576001010C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C52BB5A2-37EB-45F8-8056-F2576001010C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
