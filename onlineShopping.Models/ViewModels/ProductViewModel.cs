@@ -10,10 +10,7 @@ namespace onlineShopping.Models.ViewModels
 
  
         public string ProductName { get; set; }
-/// <summary>
-/// unit price
-/// </summary>
-       
+
         public decimal UnitPrice { get; set; }
 
        
